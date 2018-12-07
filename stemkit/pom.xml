@@ -8,13 +8,12 @@
         <version>2.0.6.RELEASE</version>
     </parent>
 
+    <description>The code to be used to facilitate and speed up Java development.</description>
     <groupId>com.bystr.stemkit</groupId>
     <artifactId>stemkit</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>pom</packaging>
 
-    <name>stemkit</name>
-    <description>The code to be used to facilitate and speed up Java development.</description>
+    <packaging>pom</packaging>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -23,5 +22,6 @@
 
     <modules>
         <module>stemkit-bdd</module>
+        <module>stemkit-util</module>
     </modules>
 </project>

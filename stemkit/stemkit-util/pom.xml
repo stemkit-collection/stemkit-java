@@ -8,35 +8,37 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>stemkit-bdd</artifactId>
-    <description>Support for BDD style unit testing</description>
+    <artifactId>stemkit-util</artifactId>
+    <description>Utility classes</description>
 
     <dependencies>
-      <!-- Oleaster Matchers -->
       <dependency>
-        <groupId>com.mscharhag.oleaster</groupId>
-        <artifactId>oleaster-matcher</artifactId>
-        <version>0.1.2</version>
+        <groupId>com.bystr.stemkit</groupId>
+        <artifactId>stemkit-bdd</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+        <scope>test</scope>
       </dependency>
 
-      <!-- Oleaster JUnit runner -->
       <dependency>
-        <groupId>com.mscharhag.oleaster</groupId>
-        <artifactId>oleaster-runner</artifactId>
-        <version>0.1.2</version>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-databind</artifactId>
       </dependency>
 
-      <!-- Mockito core -->
       <dependency>
-        <groupId>org.mockito</groupId>
-        <artifactId>mockito-core</artifactId>
+        <groupId>com.fasterxml.jackson.dataformat</groupId>
+        <artifactId>jackson-dataformat-yaml</artifactId>
       </dependency>
 
-      <!-- Spring test framework -->
       <dependency>
-        <groupId>org.springframework</groupId>
-        <artifactId>spring-test</artifactId>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-lang3</artifactId>
       </dependency>
+
+<dependency>
+   <groupId>org.apache.commons</groupId>
+   <artifactId>commons-text</artifactId>
+   <version>1.6</version>
+</dependency>
 
       <dependency>
         <groupId>org.springframework.boot</groupId>
