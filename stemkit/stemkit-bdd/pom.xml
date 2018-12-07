@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.bystr.stemkit</groupId>
+        <artifactId>stemkit</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>stemkit-bdd</artifactId>
+    <packaging>jar</packaging>
+
+    <name>stemkit-bdd</name>
+    <description>Support for BDD style unit testing</description>
+
+    <dependencies>
+      <!-- Oleaster Matchers -->
+      <dependency>
+        <groupId>com.mscharhag.oleaster</groupId>
+        <artifactId>oleaster-matcher</artifactId>
+        <version>0.1.2</version>
+      </dependency>
+
+      <!-- Oleaster JUnit runner -->
+      <dependency>
+        <groupId>com.mscharhag.oleaster</groupId>
+        <artifactId>oleaster-runner</artifactId>
+        <version>0.1.2</version>
+      </dependency>
+
+      <!-- Mockito core -->
+      <dependency>
+        <groupId>org.mockito</groupId>
+        <artifactId>mockito-core</artifactId>
+      </dependency>
+
+      <!-- Spring test framework -->
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-test</artifactId>
+      </dependency>
+
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter</artifactId>
+      </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>
