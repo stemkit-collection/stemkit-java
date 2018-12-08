@@ -24,5 +24,6 @@
         <module>stemkit-bdd</module>
         <module>stemkit-util</module>
         <module>stemkit-i18n</module>
+        <module>stemkit-web</module>
     </modules>
 </project>
