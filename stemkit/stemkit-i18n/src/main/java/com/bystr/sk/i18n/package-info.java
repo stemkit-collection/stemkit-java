@@ -1,3 +1,11 @@
+/*  vim: set sw=4:
+ *  Copyright (c) 2018, Gennady Bystritsky <gennady@bystr.com>
+ *
+ *  Distributed under the MIT License.
+ *  This is free software. See 'LICENSE' for details.
+ *  You must read and accept the license prior to use.
+*/
+
 /**
  * Extended support for localization based on Java resource bundles and
  * message formatting capabilities, as well on Spring facilities for locating,
