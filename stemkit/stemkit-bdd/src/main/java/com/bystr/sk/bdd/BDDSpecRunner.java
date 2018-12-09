@@ -26,7 +26,6 @@ import org.junit.runners.model.InitializationError;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import org.mockito.invocation.InvocationOnMock;
-import org.mockito.stubbing.Answer;
 import org.springframework.test.annotation.DirtiesContext.HierarchyMode;
 import org.springframework.test.context.TestContextManager;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
@@ -233,21 +232,20 @@ public class BDDSpecRunner extends OleasterRunner {
     }
 
     public static <T> T strictMock(final String mockName, final Class<T> targetClass) {
-        final T mock = Mockito.mock(targetClass, new Answer<Object>() {
-            @Override
-            public Object answer(final InvocationOnMock invocation) throws Throwable {
-                throw new RuntimeException(format("%s: %s#%s(%s) is not stubbed",
-                    mockName,
-                    targetClass.getName(),
-                    invocation.getMethod().getName(),
-                    Stream.of(invocation.getMethod().getParameterTypes())
-                        .map(targetClass -> targetClass.getName())
-                        .collect(joining(", "))
-                ));
-            }
+        final T mock = Mockito.mock(targetClass, invocation -> {
+            throw new RuntimeException(format("%s: %s#%s(%s) is not stubbed",
+                mockName,
+                targetClass.getName(),
+                invocation.getMethod().getName(),
+                Stream.of(invocation.getMethod().getParameterTypes())
+                    .map(Class::getName)
+                    .collect(joining(", "))
+            ));
         });
 
-        Mockito.doReturn(mockName).when(mock).toString();
+        Mockito.doReturn(mockName)
+            .when(mock).toString();
+
         return mock;
     }
 
