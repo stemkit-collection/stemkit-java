@@ -10,6 +10,7 @@
 
     <artifactId>stemkit-i18n</artifactId>
     <description>Internationalization support</description>
+    <packaging>jar</packaging>
 
     <dependencies>
         <dependency>
@@ -41,6 +42,10 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
             </plugin>
         </plugins>
     </build>

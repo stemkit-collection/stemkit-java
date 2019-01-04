@@ -8,11 +8,11 @@
         <version>2.1.1.RELEASE</version>
     </parent>
 
-    <description>The code to be used to facilitate and speed up Java development.</description>
     <groupId>com.bystr.stemkit</groupId>
-    <artifactId>stemkit</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
+    <artifactId>stemkit</artifactId>
+    <description>The code to be used to facilitate and speed up Java development</description>
     <packaging>pom</packaging>
 
     <properties>
