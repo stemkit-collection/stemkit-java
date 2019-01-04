@@ -13,6 +13,9 @@ all:: compile
 compile::
 	mvn test-compile
 
+clean::
+	find . -type d -name target -prune | xargs -t -n1 rm -rf
+
 install-top-only::
 	mvn install -N
 
