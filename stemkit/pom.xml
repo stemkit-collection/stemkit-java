@@ -28,4 +28,53 @@
         <module>stemkit-i18n</module>
         <module>stemkit-web</module>
     </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.bystr.stemkit</groupId>
+                <artifactId>stemkit-bdd</artifactId>
+                <version>${revision}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>com.bystr.stemkit</groupId>
+                <artifactId>stemkit-util</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.bystr.stemkit</groupId>
+                <artifactId>stemkit-i18n</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.bystr.stemkit</groupId>
+                <artifactId>stemkit-web</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <!-- Oleaster Matchers -->
+            <dependency>
+                <groupId>com.mscharhag.oleaster</groupId>
+                <artifactId>oleaster-matcher</artifactId>
+                <version>0.1.2</version>
+            </dependency>
+
+            <!-- Oleaster JUnit runner -->
+            <dependency>
+                <groupId>com.mscharhag.oleaster</groupId>
+                <artifactId>oleaster-runner</artifactId>
+                <version>0.1.2</version>
+            </dependency>
+
+            <dependency>
+                 <groupId>org.apache.commons</groupId>
+                 <artifactId>commons-text</artifactId>
+                 <version>1.6</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 </project>

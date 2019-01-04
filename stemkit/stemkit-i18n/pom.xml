@@ -16,14 +16,12 @@
         <dependency>
             <groupId>com.bystr.stemkit</groupId>
             <artifactId>stemkit-bdd</artifactId>
-            <version>${revision}</version>
             <scope>test</scope>
         </dependency>
 
         <dependency>
             <groupId>com.bystr.stemkit</groupId>
             <artifactId>stemkit-util</artifactId>
-            <version>${revision}</version>
         </dependency>
 
         <dependency>

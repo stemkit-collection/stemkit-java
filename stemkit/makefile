@@ -10,6 +10,9 @@ TARGETS := \
 
 all:: compile
 
+test package install::
+	mvn $(@)
+
 compile::
 	mvn test-compile
 

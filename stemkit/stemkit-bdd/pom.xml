@@ -17,14 +17,12 @@
         <dependency>
             <groupId>com.mscharhag.oleaster</groupId>
             <artifactId>oleaster-matcher</artifactId>
-            <version>0.1.2</version>
         </dependency>
 
         <!-- Oleaster JUnit runner -->
         <dependency>
             <groupId>com.mscharhag.oleaster</groupId>
             <artifactId>oleaster-runner</artifactId>
-            <version>0.1.2</version>
         </dependency>
 
         <!-- Mockito core -->
