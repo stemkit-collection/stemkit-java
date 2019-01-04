@@ -9,7 +9,7 @@
     </parent>
 
     <groupId>com.bystr.stemkit</groupId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>${revision}</version>
 
     <artifactId>stemkit</artifactId>
     <description>The code to be used to facilitate and speed up Java development</description>
@@ -18,6 +18,8 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+        <revision>0.0.1-SNAPSHOT</revision>
     </properties>
 
     <modules>
