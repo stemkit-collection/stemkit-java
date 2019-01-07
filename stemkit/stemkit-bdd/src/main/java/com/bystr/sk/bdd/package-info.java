@@ -24,16 +24,16 @@
  * {@code @RunWith(BDDSpecRunner.class)}
  * public class SimpleObjectSpecTest {
  *     {
- *         describe(Object.class.getName(), () -> {
- *             beforeEach(() -> {});
- *             afterEach(() -> {});
+ *         describe(Object.class.getName(), () {@code ->} {
+ *             beforeEach(() {@code ->} {});
+ *             afterEach(() {@code ->} {});
  *
- *             it("states the obvious", () -> expect(true).toBeTrue());
+ *             it("states the obvious", () {@code ->} expect(true).toBeTrue());
  *
- *             describe("under certain condition", () -> {
- *                 beforeEach(() -> setupCertainCondition());
+ *             describe("under certain condition", () {@code ->} {
+ *                 beforeEach(() {@code ->} setupCertainCondition());
  *
- *                 it("ensures certain state", () -> expect(certainState()).toBeTrue());
+ *                 it("ensures certain state", () {@code ->} expect(certainState()).toBeTrue());
  *             });
  *         });
  *     }
@@ -56,7 +56,7 @@
  * {@code describe()} and {@code it()}.
  * <p>
  * @author Gennady Bystritsky (<a href="mailto:gennady@bystr.com">gennady@bystr.com</a>)
- * <p>
+ *
  * @see com.bystr.sk.bdd.BDDSpecRunner
 */
 package com.bystr.sk.bdd;

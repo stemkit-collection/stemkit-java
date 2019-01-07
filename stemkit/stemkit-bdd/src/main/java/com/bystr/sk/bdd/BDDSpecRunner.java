@@ -45,7 +45,7 @@ import com.mscharhag.oleaster.runner.suite.Spec;
  * methods {@link BDDSpecRunner#initSpring(Object testInstance)} and/or
  * {@link BDDSpecRunner#initMocks(Object testInstance)} before each test example.
  * <p>
- * Please see the declaration of class {@link MockingObjectSpecTest} for an example of how
+ * Please see the declaration of class MockingObjectSpecTest for an example of how
  * to write BDD specs.
  * <p>
  * You will also need the following entries in your {@code pom.xml} file:
@@ -69,7 +69,7 @@ import com.mscharhag.oleaster.runner.suite.Spec;
  * }
  * </pre>
  * @author Gennady Bystritsky (<a href="mailto:gennady@bystr.com">gennady@bystr.com</a>)
- * <p>
+ *
  * @see com.mscharhag.oleaster.runner.OleasterRunner
  * @see com.mscharhag.oleaster.matcher.Matchers
  * @see com.mscharhag.oleaster.runner.StaticRunnerSupport#describe(String text, Invokable block)
@@ -93,6 +93,7 @@ public class BDDSpecRunner extends OleasterRunner {
      *     a test class, normally the one annotated with {@code @RunWith}
      * <p>
      * @exception InitializationError
+     *     an initialization exception.
     */
     public BDDSpecRunner(final Class<?> testClass) throws InitializationError {
         super(testClass);
@@ -112,7 +113,7 @@ public class BDDSpecRunner extends OleasterRunner {
      * <p>
      * Example:
      * <pre>
-     * with(getThing(), thing -> {
+     * with(getThing(), thing {@code ->} {
      *     thing.doThis();
      *     thing.doThat();
      * });
@@ -154,8 +155,8 @@ public class BDDSpecRunner extends OleasterRunner {
      * public class SimpleObjectSpecTest {
      *     ...
      *     {
-     *         describe("Sample spec", () -> {
-     *             beforeEach(() -> {
+     *         describe("Sample spec", () {@code ->} {
+     *             beforeEach(() {@code ->} {
      *                 initSpring(this)
      *             });
      *         });
@@ -165,6 +166,9 @@ public class BDDSpecRunner extends OleasterRunner {
      * <p>
      * @param testInstance [{@link Object}]
      *     a test instance.
+     * @param contextDirtyProvider [{@link UnaryOperator}{@code <Boolean>}]
+     *     a code block returning {@code true} if a context needs
+     *     to be marked dirty.
     */
     public static void initSpring(final Object testInstance, final UnaryOperator<Boolean> contextDirtyProvider) {
         withRunnerFor(testInstance, runner -> {
@@ -196,8 +200,8 @@ public class BDDSpecRunner extends OleasterRunner {
      * public class SimpleObjectSpecTest {
      *     ...
      *     {
-     *         describe("Sample spec", () -> {
-     *             beforeEach(() -> {
+     *         describe("Sample spec", () {@code ->} {
+     *             beforeEach(() {@code ->} {
      *                 initMocks(this)
      *             });
      *         });
@@ -251,9 +255,9 @@ public class BDDSpecRunner extends OleasterRunner {
 
     /**
      * A helper method to make it easier to reference and cast arguments when using
-     * {@link Mockito#doAnswer()}. For this method to automatically infer the type
+     * Mockito's doAnswer(). For this method to automatically infer the type
      * it must be used in assignment operator. It eliminates the need for casting
-     * generic types needed when {@link InvocationOnMock#getArgumentAt(int, Class)}
+     * generic types needed when InvocationOnMock's getArgumentAt(int, Class)
      * is used directly. That cast is needed because generic types do not provide
      * proper class info ({@code List<String>.class} is not currently supported).
      * <p>
@@ -261,7 +265,7 @@ public class BDDSpecRunner extends OleasterRunner {
      * <pre>
      * import static com.bystr.sk.bdd.BDDSpecRunner.mockMethodArgument;
      * ...
-     * doAnswer(invocation -> {
+     * doAnswer(invocation {@code ->} {
      *     final String name = mockMethodArgument(0, invocation);
      *     final Date date = mockMethodArgument(1, invocation);
      *     ...
@@ -274,7 +278,7 @@ public class BDDSpecRunner extends OleasterRunner {
      * @param index [{@code int}]
      *     argument index, starting from 0
      * @param invocation [{@link InvocationOnMock}]
-     *     the invocation object passed from {@link Mockito#doAnswer()}
+     *     the invocation object passed from Mockito's doAnswer()
      * <p>
      * @return [{@code R}]
      *     an object at the referenced argument properly cast to the target type
