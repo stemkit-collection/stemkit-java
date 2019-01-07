@@ -3,8 +3,6 @@
     <modelVersion>4.0.0</modelVersion>
 
     <properties>
-        <revision>0.0.1-SNAPSHOT</revision>
-
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
@@ -17,7 +15,7 @@
 
     <groupId>com.bystr.stemkit</groupId>
     <artifactId>stemkit</artifactId>
-    <version>${revision}</version>
+    <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <licenses>
@@ -56,26 +54,26 @@
             <dependency>
                 <groupId>com.bystr.stemkit</groupId>
                 <artifactId>stemkit-bdd</artifactId>
-                <version>${revision}</version>
+                <version>${project.version}</version>
                 <scope>test</scope>
             </dependency>
 
             <dependency>
                 <groupId>com.bystr.stemkit</groupId>
                 <artifactId>stemkit-util</artifactId>
-                <version>${revision}</version>
+                <version>${project.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>com.bystr.stemkit</groupId>
                 <artifactId>stemkit-i18n</artifactId>
-                <version>${revision}</version>
+                <version>${project.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>com.bystr.stemkit</groupId>
                 <artifactId>stemkit-web</artifactId>
-                <version>${revision}</version>
+                <version>${project.version}</version>
             </dependency>
 
             <!-- Oleaster Matchers -->
