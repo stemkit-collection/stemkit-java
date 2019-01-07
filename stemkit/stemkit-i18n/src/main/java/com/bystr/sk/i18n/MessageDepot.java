@@ -46,7 +46,6 @@ public interface MessageDepot {
      * @param state [boolean]
      *     {@code true} &mdash; add message code prefixes to output messages;
      *     {@code false} (default) &mdash; do not add code prefixes
-     *     </dl>
     */
     void useCodePrefix(final boolean state);
 
@@ -79,7 +78,7 @@ public interface MessageDepot {
      * file format using message codes as keys and the corresponding default
      * messages as values.
      *
-     * @param director [{@link Function}<{@link String}, {@link PrintStream}>
+     * @param director [{@link Function}{@code <}{@link String}, {@link PrintStream}{@code >}
      *     a lambda expression accepting a bundle name as a {@link String}
      *     parameter and returning a {@link PrintStream} to output the data
      *     into.

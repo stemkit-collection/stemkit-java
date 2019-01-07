@@ -49,7 +49,7 @@ public class ObjectUtils {
      * import static com.bystr.sk.util.ObjectUtils.tap;
      * ...
      * public String userById(final UUID userId) {
-     *     return tap(db.findUser(userId), user -> {
+     *     return tap(db.findUser(userId), user {@code ->} {
      *         log.info("Found user: " + user.getName());
      *     });
      * }
@@ -89,7 +89,7 @@ public class ObjectUtils {
      * import static com.bystr.sk.util.ObjectUtils.tap;
      * ...
      * public String userById(final UUID userId) {
-     *     return tap(db.findUser(userId), () -> {
+     *     return tap(db.findUser(userId), () {@code ->} {
      *         log.info("Found user for id: " + userId);
      *     });
      * }
@@ -104,7 +104,7 @@ public class ObjectUtils {
      * <p>
      * @return [{@code T}]
      *     the original object passed as a first parameter, possibly {@code null}
-     * <p>
+     *
      * @see #tap(Object, Consumer)
     */
     public static <T> T tap(final T object, final Runnable action) {
@@ -126,7 +126,7 @@ public class ObjectUtils {
      * import static com.bystr.sk.util.ObjectUtils.map;
      * ...
      * public User loginUser() {
-     *     return map(loginUserName(), userName -> {
+     *     return map(loginUserName(), userName {@code ->} {
      *         logger.info("Looking up user " + userName);
      *         return db.findUser(userName);
      *     });
@@ -163,7 +163,7 @@ public class ObjectUtils {
      * import static com.bystr.sk.util.ObjectUtils.map;
      * ...
      * public User userByName(userName) {
-     *     return map(userName, () -> {
+     *     return map(userName, () {@code ->} {
      *         logger.info("Looking up user " + userName);
      *         return db.findUser(userName);
      *     });
@@ -183,7 +183,7 @@ public class ObjectUtils {
      * @return [{@code R}]
      *     an output object of type {@code R} corresponding to the original
      *     object of type {@code T} passed as a first parameter
-     * <p>
+     *
      * @see #map(Object, Function)
     */
     public static <T, R> R map(final T object, final Supplier<R> supplier) {
@@ -229,7 +229,7 @@ public class ObjectUtils {
      * import static com.bystr.sk.util.ObjectUtils.filter;
      * ...
      * public User userById(final UUID userId) {
-     *     return filter(db.findUserById(), user -> {
+     *     return filter(db.findUserById(), user {@code ->} {
      *         return checker.mayAccessUser(user);
      *     });
      * }
@@ -263,14 +263,14 @@ public class ObjectUtils {
      * <p>
      * @param object [{@code T}]
      *     an object to tap, or {@code null}
-     * @param consumer [{@link Consumer}<{@link Optional}{@code <T>}>]
+     * @param consumer [{@link Consumer}{@code <}{@link Optional}{@code <T>>}]
      *     a code block to execute with that object wrapped in
      *     {@link Optional#ofNullable(Object)}
      * <p>
      * @return [{@link Optional}{@code <T>}]
      *     the original object passed as a first parameter wrapped in
      *     {@link Optional#ofNullable(Object)}
-     * <p>
+     *
      * @see #tap(Object, Consumer)
      * @see #tap(Object, Runnable)
     */
@@ -294,7 +294,7 @@ public class ObjectUtils {
      * <p>
      * @param object [{@code T}]
      *     an object to map, or {@code null}
-     * @param mapper [{@link Function}<{@link Optional}{@code <T>}, {@code R}>]
+     * @param mapper [{@link Function}{@code <}{@link Optional}{@code <T>, R>}]
      *     a code block to execute with that object wrapped in
      *     {@link Optional#ofNullable(Object)} and to return another object of type
      *     {@code R}
@@ -303,7 +303,7 @@ public class ObjectUtils {
      *     an output object of type {@code R} wrapped in
      *     {@link Optional#ofNullable(Object)} corresponding to the original
      *     object of type {@code T} passed as a first parameter
-     * <p>
+     *
      * @see #map(Object, Function)
     */
     public static <T, R> R mapNullable(final T object, final Function<Optional<T>, R> mapper) {

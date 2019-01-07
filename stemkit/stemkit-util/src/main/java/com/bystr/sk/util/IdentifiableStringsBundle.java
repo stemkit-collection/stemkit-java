@@ -53,7 +53,7 @@ public class IdentifiableStringsBundle {
      * @param id [{@link String}]
      *     the id for this set of strings
      *
-     * @param strings [{@link Set}<{@link String}>]
+     * @param strings [{@link Set}{@code <}{@link String}{@code >}]
      *     the set of strings to keep in this identifiable string bundle
     */
     @JsonCreator
@@ -79,7 +79,7 @@ public class IdentifiableStringsBundle {
     /**
      * Returns a set of strings this bundle has been created with.
      * <p>
-     * @return [{@link Set}<{@link String}>]
+     * @return [{@link Set}{@code <}{@link String}{@code >}]
      *     the set of strings hosted by this bundle
     */
     public Set<String> getStrings() {
