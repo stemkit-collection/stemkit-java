@@ -10,7 +10,7 @@ TARGETS := \
 
 all:: compile
 
-test package install::
+test package install deploy::
 	mvn $(@)
 
 compile::
