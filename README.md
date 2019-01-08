@@ -2,6 +2,8 @@
 
 This repository contains the code for facilitating and speeding up Java development.
 
+GitHub Project Page: https://stemkit-collection.github.io/stemkit-java
+
 Amoung other things the following areas are covered:
 
 - Support for BDD style unit tests (specs)
