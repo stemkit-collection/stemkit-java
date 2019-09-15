@@ -35,6 +35,9 @@ show-dependency-list::
 show-dependency-tree::
 	mvn dependency:tree
 
+show-where-mockito:
+	mvn dependency:tree -Dincludes=org.mockito:mockito-core
+
 help::
 	mvn help:help
 
