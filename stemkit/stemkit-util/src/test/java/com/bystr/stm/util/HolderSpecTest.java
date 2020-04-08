@@ -22,7 +22,6 @@ import java.util.MissingResourceException;
 import org.junit.runner.RunWith;
 
 import com.bystr.stm.bdd.BDDSpecRunner;
-import com.bystr.stm.util.Holder;
 
 @RunWith(BDDSpecRunner.class)
 public class HolderSpecTest {

@@ -14,7 +14,7 @@ import static com.mscharhag.oleaster.runner.StaticRunnerSupport.afterEach;
 import static com.mscharhag.oleaster.runner.StaticRunnerSupport.beforeEach;
 import static com.mscharhag.oleaster.runner.StaticRunnerSupport.describe;
 import static com.mscharhag.oleaster.runner.StaticRunnerSupport.it;
-import static org.mockito.Matchers.any;
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.atLeastOnce;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -25,8 +25,6 @@ import java.util.UUID;
 
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
-
-import com.bystr.stm.bdd.BDDSpecRunner;
 
 @RunWith(BDDSpecRunner.class)
 public class MockingObjectSpecTest {

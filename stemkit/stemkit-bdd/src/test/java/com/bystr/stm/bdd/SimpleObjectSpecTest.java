@@ -16,8 +16,6 @@ import static com.mscharhag.oleaster.runner.StaticRunnerSupport.it;
 
 import org.junit.runner.RunWith;
 
-import com.bystr.stm.bdd.BDDSpecRunner;
-
 @RunWith(BDDSpecRunner.class)
 public class SimpleObjectSpecTest {
     {
